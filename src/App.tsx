@@ -11,6 +11,11 @@ import { Dashboard } from "@/pages/Dashboard";
 import { TaskLogger } from "@/pages/TaskLogger";
 import { MyTasks } from "@/pages/MyTasks";
 import { LeaveManagement } from "@/pages/LeaveManagement";
+import { TeamTasks } from "@/pages/TeamTasks";
+import { AdminConsole } from "@/pages/AdminConsole";
+import { Help } from "@/pages/Help";
+import { Files } from "@/pages/Files";
+import NotFound from "@/pages/NotFound";
 import "@/i18n/config";
 
 const queryClient = new QueryClient();
@@ -31,6 +36,11 @@ const App = () => (
               <Route path="/task-logger" element={<TaskLogger />} />
               <Route path="/my-tasks" element={<MyTasks />} />
               <Route path="/leaves" element={<LeaveManagement />} />
+              <Route path="/team-tasks" element={<TeamTasks />} />
+              <Route path="/files" element={<Files />} />
+              <Route path="/admin" element={<AdminConsole />} />
+              <Route path="/help" element={<Help />} />
+              <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
         </BrowserRouter>
